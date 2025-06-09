@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FinTech Pro - Your Trusted Financial Technology Partner</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9fafb;
+      color: #1c1e21;
+      line-height: 1.6;
+    }
+    a {
+      color: #2a6fdb;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #1b4fbd;
+    }
+    header {
+      position: relative;
+      height: 460px;
+      /* Background image from Google (Unsplash) */
+      background: url('https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      font-weight: 600;
+      border-bottom: 4px solid #f39c12;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(20, 40, 80, 0.6);
+      z-index: 0;
+    }
+    header .header-content {
+      position: relative;
+      z-index: 1;
+      max-width: 850px;
+      padding: 20px;
+    }
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 4rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 14px rgba(0, 0, 0, 0.85);
+    }
+    header p {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
+    }
+    nav {
+      background-color: #142850;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: center;
+      gap: 34px;
+      font-weight: 600;
+      font-size: 1rem;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18);
+    }
+    nav a {
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #f39c12;
+    }
+    main {
+      max-width: 1200px;
+      margin: 70px auto 120px;
+      padding: 0 24px;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 42px;
+    }
+    .service {
+      background: white;
+      padding: 36px;
+      border-radius: 14px;
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+    .service:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
+    }
+    .service svg {
+      width: 80px;
+      height: 80px;
+      fill: #142850;
+      margin-bottom: 28px;
+      transition: fill 0.3s ease;
+    }
+    .service:hover svg {
+      fill: #f39c12;
+    }
+    .service h3 {
+      font-size: 2rem;
+      margin-bottom: 18px;
+      font-weight: 700;
+      color: #0d2240;
+    }
+    .service p {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.6;
+    }
+    .about-section {
+      background: white;
+      margin-top: 90px;
+      padding: 56px 40px;
+      border-radius: 14px;
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.07);
+      text-align: center;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .about-section h2 {
+      font-size: 3rem;
+      margin-bottom: 26px;
+      color: #142850;
+      font-weight: 700;
+    }
+    .about-section p {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.25rem;
+      color: #555;
+      line-height: 1.75;
+      max-width: 780px;
+      margin: auto;
+    }
+    footer {
+      background-color: #0d2240;
+      color: #e1e1e1;
+      text-align: center;
+      padding: 36px 24px;
+      font-size: 1rem;
+      position: relative;
+      box-shadow: 0 -3px 15px rgba(0, 0, 0, 0.3);
+    }
+    .footer-social {
+      margin: 22px 0 36px;
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+    }
+    .footer-social a {
+      color: #e1e1e1;
+      font-size: 30px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.3s ease;
+    }
+    .footer-social a:hover {
+      color: #f39c12;
+    }
+    .footer-social svg {
+      fill: currentColor;
+      width: 30px;
+      height: 30px;
+    }
+    @media (max-width: 720px) {
+      header h1 {
+        font-size: 2.7rem;
+      }
+      .services {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header role="banner">
+  <div class="header-content">
+    <h1>FinTech Pro</h1>
+    <p>Your Trusted Financial Technology Partner</p>
+  </div>
+</header>
+
+<nav role="navigation" aria-label="Primary navigation">
+  <a href="#">Home</a>
+  <a href="#services">Services</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main>
+  <section class="services" id="services" aria-label="Core services of FinTech Pro">
+    <article class="service" role="region" aria-labelledby="service1-title">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <path d="M32 6C17.64 6 6 17.64 6 32s11.64 26 26 26 26-11.64 26-26S46.36 6 32 6zm0 48c-12.15 0-22-9.85-22-22S19.85 10 32 10s22 9.85 22 22-9.85 22-22 22z"/>
+        <path d="M35 16h-6v20h14v-4h-8z"/>
+      </svg>
+      <h3 id="service1-title">Digital Payment Solutions</h3>
+      <p>Secure, fast, and scalable payment processing systems designed for modern businesses.</p>
+    </article>
+    <article class="service" role="region" aria-labelledby="service2-title">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <path d="M52 14H12a4 4 0 00-4 4v28a4 4 0 004 4h40a4 4 0 004-4V18a4 4 0 00-4-4zm-2 30H14V20h36z"/>
+        <path d="M20 26h8v4h-8zm12 0h8v4h-8z"/>
+      </svg>
+      <h3 id="service2-title">Secure Banking APIs</h3>
+      <p>Robust APIs allowing seamless integration with banks and financial institutions worldwide.</p>
+    </article>
+    <article class="service" role="region" aria-labelledby="service3-title">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <path d="M32 12a20 20 0 1020 20A20.023 20.023 0 0032 12zm0 36a16 16 0 1116-16 16.019 16.019 0 01-16 16z"/>
+        <path d="M32 24a8 8 0 108 8 8.01 8.01 0 00-8-8z"/>
+      </svg>
+      <h3 id="service3-title">AI-driven Analytics</h3>
+      <p>Leverage artificial intelligence to gain insights and drive smarter financial decisions.</p>
+    </article>
+  </section>
+
+  <section class="about-section" id="about" aria-label="About FinTech Pro">
+    <h2>About FinTech Pro</h2>
+    <p>At FinTech Pro, we specialize in innovative financial technologies that empower businesses and consumers to achieve more. With cutting-edge solutions and a dedicated team, we bridge the gap between finance and technology to shape the future of banking and payments.</p>
+  </section>
+</main>
+
+<footer role="contentinfo">
+  <div class="footer-social" aria-label="Social media links">
+    <a href="https://www.linkedin.com/company/fintechpro" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v14H0zM7.5 8h4.5v2.2h.06c.63-1.2 2.16-2.5 4.44-2.5 4.76 0 5.64 3.13 5.64 7.2V22H17v-6.4c0-1.5-.03-3.4-2.08-3.4-2.1 0-2.42 1.63-2.42 3.3V22H7.5z"/>
+      </svg>
+    </a>
+    <a href="https://twitter.com/fintechpro" target="_blank" rel="noopener" aria-label="Twitter">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M23.954 4.569c-.885.392-1.83.656-2.825.775a4.937 4.937 0 002.163-2.724c-.951.564-2.005.974-3.127 1.195a4.924 4.924 0 00-8.384 4.482c-4.09-.205-7.719-2.165-10.148-5.144a4.822 4.822 0 00-.664 2.475c0 1.708.869 3.216 2.188 4.099a4.904 4.904 0 01-2.228-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.996 4.996 0 01-2.224.084c.63 1.953 2.445 3.377 4.604 3.417a9.868 9.868 0 01-6.102 2.104c-.396 0-.79-.023-1.175-.068a13.953 13.953 0 007.548 2.209c9.142 0 14.307-7.721 14.307-14.425 0-.22-.005-.438-.015-.654a10.243 10.243 0 002.5-2.62z"/>
+      </svg>
+    </a>
+    <a href="https://www.facebook.com/fintechpro" target="_blank" rel="noopener" aria-label="Facebook">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M22 12a10 10 0 10-11.6 9.9v-7h-2v-3h2v-2c0-2 1-3 3-3h2v3h-2c-1 0-1 0-1 1v2h3l-1 3h-2v7A10 10 0 0022 12z"/>
+      </svg>
+    </a>
+  </div>
+  <p>Contact us: <a href="mailto:info@fintechpro.com">info@fintechpro.com</a> | Phone: +1 (800) 555-0100</p>
+  <p>© 2025 FinTech Pro. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
